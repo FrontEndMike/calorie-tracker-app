@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 
-const Form = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        age: '',
-        sex: '',
-        height: '',
-        weight: '',
-        activity: '',
-        goals: '',
-    });
+
+const Form = ({ formData, setFormData, onSubmit }) => {
+    if (!formData) {
+        console.error("formData is undefined in Form.js");
+        return <p>Error: formData is missing!</p>;
+    }
     const handleChange = (event) => {
+        /* Update data based on name & value */
         const { name, value } = event.target;
+
+
         setFormData((prevData => ({
-            ...prevData,
-            [name]: value,
+            ...prevData, /* Keep previous data "formData" */
+            [name]: value, /* Set new form value to the data that has changed */
         })));
     };
+
+    /* On submit pass new props back to parent */
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        onSubmit(formData);
     }
+
     return(
-         <form className="card flex" onSubmit={handleSubmit}>
+         <form className="card flex w-2/3 bg-white" onSubmit={handleSubmit}>
             <label htmlFor="name" className="flex flex-wrap">
                 Name
                 <input 

@@ -1,0 +1,16 @@
+form{
+    label{
+        @apply flex-row gap-4
+    }
+    input, select{
+        @apply border max-w-40 p-1 rounded-[5px];
+    }
+}
+
+.card{
+    @apply p-6 bg-white flex-col gap-2 text-center;
+}
+
+button{
+    @apply border min-w-24 border-black px-2 py-1 inline bg-white text-black rounded-[25px] shadow-sm hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer;
+}
