@@ -4,19 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+body{
+    
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+}
 h1{
-    @apply hidden mt-8 text-4xl text-center font-bold text-blue-500;
+    @apply text-left text-4xl text-white font-bold;
+    span{
+        @apply text-base block font-normal;
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 #root{
-    @apply flex justify-center items-center h-full;
+    @apply flex justify-center pt-4 md:pt-0 md:items-center h-full;
 }
 
 .main-parent{
-    @apply z-2 relative
+    @apply z-2 relative px-8 w-full;
 }
 
 .form-aside{
-    @apply bg-cover bg-no-repeat bg-linear-to-t from-sky-500 to-indigo-500
+    @apply bg-cover bg-no-repeat bg-linear-to-t from-sky-500 to-indigo-500;
 }

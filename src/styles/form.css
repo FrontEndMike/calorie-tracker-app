@@ -1,9 +1,22 @@
+.form-parent{
+    @apply max-w-[650px] w-full md:flex flex-wrap shadow-lg rounded-lg  mt-4 mx-auto overflow-hidden block;
+}
+
+.form-aside{
+    @apply w-full md:w-2/5 px-6 py-4 ;
+}
+
 form{
+    @apply w-full md:flex md:w-3/5 bg-white;
     label{
-        @apply flex-row gap-4
+        @apply flex-row gap-4 w-full block;
     }
     input, select{
-        @apply border max-w-40 p-1 rounded-[5px];
+        @apply border p-2 rounded-[5px] mb-2 w-full ;
+        font-family: 'Open Sans', sans-serif;
+        &::placeholder{
+            @apply text-black;
+        }
     }
 }
 
@@ -12,5 +25,6 @@ form{
 }
 
 button{
-    @apply border min-w-24 border-black px-2 py-1 inline bg-white text-black rounded-[25px] shadow-sm hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer;
+    @apply border min-w-24 px-2 py-1 inline bg-cover bg-no-repeat bg-linear-to-t from-sky-500 to-indigo-500 text-white rounded-[25px] shadow-sm hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer;
 }
+

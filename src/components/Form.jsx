@@ -24,9 +24,9 @@ const Form = ({ formData, setFormData, onSubmit }) => {
     }
 
     return(
-         <form className="card flex w-2/3 bg-white" onSubmit={handleSubmit}>
-            <label htmlFor="name" className="flex flex-wrap">
-                Name
+         <form className="card" onSubmit={handleSubmit}>
+            <label htmlFor="name" className="">
+                <span className="sr-only">Name</span>
                 <input 
                     type="text" 
                     id="name" 
@@ -38,8 +38,8 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                 />
             </label>
 
-            <label htmlFor="age" className="flex flex-wrap">
-                Age
+            <label htmlFor="age" className="">
+                <span className="sr-only">Age</span>
                 <input 
                     type="number" 
                     id="age" 
@@ -53,8 +53,8 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                 />
             </label>
 
-            <label htmlFor="sex" className="flex flex-wrap">
-                Sex
+            <label htmlFor="sex" className="">
+                <span className="sr-only">Sex</span>
                 <select 
                     name="sex"
                     onChange={handleChange}
@@ -62,13 +62,13 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                     required
                 >
                     <option>Select Sex</option>
-                    <option value="man">Man</option>
-                    <option value="woman">Woman</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select>
             </label>
 
-            <label htmlFor="height" className="flex flex-wrap">
-                Height
+            <label htmlFor="height" className="">
+                <span className="sr-only">Height</span>
                 <select 
                     name="height"
                     onChange={handleChange}
@@ -127,8 +127,8 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                 </select>
             </label>
 
-            <label htmlFor="weight" className="flex flex-wrap">
-                Weight
+            <label htmlFor="weight" className="">
+                <span className="sr-only">Weight</span>
                 <input 
                     type="number" 
                     id="weight" 
@@ -142,8 +142,8 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                 />
             </label>
 
-            <label htmlFor="activity" className="flex flex-wrap">
-                Activity Level
+            <label htmlFor="activity" className="">
+                <span className="sr-only">Activity Level</span>
                 <select 
                     id="activity" 
                     name="activity"
@@ -159,8 +159,8 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                     <option value="super">Super active (intense training or a physically demanding job)</option>
                 </select>
             </label>
-            <label htmlFor="activity" className="flex flex-wrap">
-                Goals
+            <label htmlFor="activity" className="">
+                <span className="sr-only">Goals</span>
                 <select 
                     id="goals" 
                     name="goals"

@@ -23,12 +23,16 @@ function App() {
 
   return (
     <>
-      <div className='px-4 main-parent w-full'>
-        <h1 className="">Calorie Intake Estimator</h1>
-        <p className='text-center'>By: FrontEndMike</p>
-        <div className="max-w-[600px] w-full flex shadow-lg rounded-lg  mt-4 mx-auto overflow-hidden">
-          <div className="w-1/3 form-aside p-4">
-            <h2 className="text-3xl bold mt-4 text-white">Welcome</h2>
+      <div className='main-parent'>
+        <div className="form-parent">
+          <div className="form-aside">
+            <h1 className="">
+              Welcome
+              <span className="">to the Calorie Intake Estimator by <a href="https://frontendmike.com" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  @FrontEndMike
+              </a></span>
+              </h1>
+              <p className="text-white mt-4">Please enter all your information for an estimation of your suggested daily calorie intake.</p>
           </div>
         <Form className="" formData={formData} setFormData={setFormData} onSubmit={handleFormSubmit} 
         /* Pass global state to child component from parent through props */ />
