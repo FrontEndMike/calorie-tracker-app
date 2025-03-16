@@ -6,8 +6,10 @@
     @apply w-full md:w-2/5 px-6 py-4 ;
 }
 
-form{
+.right-element{
     @apply w-full md:flex md:w-3/5 bg-white;
+}
+form{
     label{
         @apply flex-row gap-4 w-full block;
     }

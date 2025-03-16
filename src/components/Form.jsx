@@ -24,7 +24,7 @@ const Form = ({ formData, setFormData, onSubmit }) => {
     }
 
     return(
-         <form className="card" onSubmit={handleSubmit}>
+         <form className="card right-element" onSubmit={handleSubmit}>
             <label htmlFor="name" className="">
                 <span className="sr-only">Name</span>
                 <input 
@@ -156,10 +156,10 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                     <option value="light">Lightly active (1-3 days of exercise per week)</option>
                     <option value="moderately">Moderately active (3-5 days per week)</option>
                     <option value="very">Very active (6-7 days per week)</option>
-                    <option value="super">Super active (intense training or a physically demanding job)</option>
+                    <option value="super_active">Super active (intense training or a physically demanding job)</option>
                 </select>
             </label>
-            <label htmlFor="activity" className="">
+            <label htmlFor="goals" className="">
                 <span className="sr-only">Goals</span>
                 <select 
                     id="goals" 
@@ -169,9 +169,10 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                     required
                 >
                     <option>Select Goal</option>
-                    <option value="fat-loss">Fat loss</option>
+                    <option value="fat_loss">Fat loss</option>
+                    <option value="aggressive_fat_loss">Aggressive Fat loss</option>
                     <option value="maintenance">Maintenance</option>
-                    <option value="muscle-gain">Muscle gain</option>
+                    <option value="muscle_gain">Muscle gain</option>
                 </select>
             </label>
             <div className="mt-8">
