@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Form from './components/form'
+import Results from './components/results'
 import calculateResults from './components/Calculations'
 import './App.css'
 
@@ -15,11 +16,19 @@ function App() {
         goals: '',
     });
 
+    const [calculatedResult, setCalculatedResult] = useState(null);
+    const [isSubmitted, setisSubmitted] = useState(false);
+
     /* Process new form data passed from child back to parent */
     const handleFormSubmit = (data) => {
       setFormData(data);
-      calculateResults(data);
+      let result = calculateResults(data);
+      setisSubmitted(true);
+      if(result !== null){
+        setCalculatedResult(result);
+      }
     };
+
 
   return (
     <>
@@ -34,8 +43,9 @@ function App() {
               </h1>
               <p className="text-white mt-4">Please enter all your information for an estimation of your suggested daily calorie intake.</p>
           </div>
-        <Form className="" formData={formData} setFormData={setFormData} onSubmit={handleFormSubmit} 
-        /* Pass global state to child component from parent through props */ />
+            { /* Pass global state to child component from parent through props */ }
+            {!isSubmitted &&  <Form formData={formData} setFormData={setFormData} onSubmit={handleFormSubmit} /> }
+            {isSubmitted && <Results results={calculatedResult} data={formData} /> }
         </div>
       </div>
      
