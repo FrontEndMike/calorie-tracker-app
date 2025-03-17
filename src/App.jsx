@@ -29,6 +29,11 @@ function App() {
       }
     };
 
+    const handleReset = () => {
+      setisSubmitted(false); // Show form again
+  };
+
+
 
   return (
     <>
@@ -45,7 +50,7 @@ function App() {
           </div>
             { /* Pass global state to child component from parent through props */ }
             {!isSubmitted &&  <Form formData={formData} setFormData={setFormData} onSubmit={handleFormSubmit} /> }
-            {isSubmitted && <Results results={calculatedResult} data={formData} /> }
+            {isSubmitted && <Results onReset={handleReset} results={calculatedResult} data={formData} /> }
         </div>
       </div>
      
