@@ -4,9 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    
+html,body{
+    overflow: auto;
+    touch-action: auto;
 }
+
 p{
     font-family: 'Open Sans', sans-serif;
 }
