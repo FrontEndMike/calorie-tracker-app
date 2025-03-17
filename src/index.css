@@ -22,6 +22,15 @@ h1{
 #root{
     @apply flex justify-center pt-4 md:pt-0 md:items-center h-full;
     overflow: scroll;
+    @media screen and (max-width: 768px) {
+        background-image: url('./assets/gradient-bg-mobile.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+video{
+    @apply hidden md:block lg:block;
 }
 
 .main-parent{
