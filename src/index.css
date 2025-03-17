@@ -19,6 +19,7 @@ h1{
 }
 #root{
     @apply flex justify-center pt-4 md:pt-0 md:items-center h-full;
+    overflow: scroll;
 }
 
 .main-parent{
