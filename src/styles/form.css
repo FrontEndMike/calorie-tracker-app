@@ -1,5 +1,5 @@
 .form-parent{
-    @apply max-w-[650px] w-full md:flex flex-wrap shadow-lg rounded-lg  mt-4 mx-auto overflow-hidden block;
+    @apply max-w-[650px] w-full md:flex flex-wrap shadow-lg rounded-lg  mt-4 mx-auto overflow-hidden block min-h-[516px];
 }
 
 .form-aside{

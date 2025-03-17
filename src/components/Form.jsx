@@ -176,7 +176,7 @@ const Form = ({ formData, setFormData, onSubmit }) => {
                 </select>
             </label>
             <div className="mt-8">
-                <button type="submit">Submit</button>
+                <button type="submit">Calculate</button>
             </div>
         </form>
     );
